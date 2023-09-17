@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto DashBoard</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+    <nav class="nav-container">
+        <div class="nav-inner-container">
+            <div class="logo">
+                <a href="/">
+                    <div class="nav-logo-image-container">
+                        <img src="../public/logo.png" class="flat-logo" alt="Logo">
+                    </div>
+                </a>
+            </div>
+            <div class="nav-btn-options">
+                <div class="btn-group">
+                    <button type="button" class="btn">INR</button>
+                    <div class="btn-dropdownMenu">
+                        <a value="INR" tabindex="0" class="dropdown-item" href="/">INR</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn">BTC</button>
+                    <div class="btn-dropdownMenu">
+                        <a value="BTC" class="dropdown-item" href="#">BTC</a>
+                        <a value="ETH" class="dropdown-item" href="#">ETH</a>
+                        <a value="USDT" class="dropdown-item" href="#">USDT</a>
+                        <a value="XRP" class="dropdown-item" href="#">XRP</a>
+                        <a value="TRX" class="dropdown-item" href="#">TRX</a>
+                        <a value="DASH" class="dropdown-item" href="#">DASH</a>
+                        <a value="ZEC" class="dropdown-item" href="#">ZEC</a>
+                        <a value="XEM" class="dropdown-item" href="#">XEM</a>
+                        <a value="IOST" class="dropdown-item" href="#">IOST</a>
+                        <a value="WIN" class="dropdown-item" href="#">WIN</a>
+                        <a value="BTT" class="dropdown-item" href="#">BTT</a>
+                        <a value="WRX" class="dropdown-item" href="#">WRX</a>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn">BUY BTC</button>
+                    <div class="btn-dropdownMenu">
+                        <a target="_blank"
+                            href="https://wazirx.com/invite/sp7pvbt6?utm_source=finstreet&amp;utm_medium=affiliate&amp;utm_campaign=regnow-btn"
+                            type="button" class="header-button">BUY BTC</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="nav-right">
+                <div class="nav-right-container">
+                    <div class="progress-bar-wrapper">
+                        Circle
+                    </div>
+                    <a href="https://web.telegram.org/" target="_blank">
+                        <div class="btn telbtn">
+                            Connect Telegram
+                        </div>
+                    </a>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="slider" onclick="toggleTheme()"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Central content -->
+    <div class="centre-content">
+        <div class="center-upper-caraousel">
+            <div class="center-inner-caraousel">
+                <div class="item">
+                    <div class="item-price-change">
+                        0.73
+                        %
+                    </div>
+                    <div class="item-change-time">5 Mins</div>
+                </div>
+                <div class="item">
+                    <div class="item-price-change">
+                        0.73
+                        %
+                    </div>
+                    <div class="item-change-time">1 Hour</div>
+                </div>
+                <div style="max-width: 40%;">
+                    <div class="item" id="item-main-price-container">
+                        <div class="price-subtext">
+                            <span class="subtext-heading">Best Price to Trade</span>
+                        </div>
+                        <div class="price-heading">
+                            ₹ 24,14,191
+                        </div>
+                        <div class="price-subtext">
+                            Average BTC/INR net price including commission
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-price-change">
+                        2.37
+                        %
+                    </div>
+                    <div class="item-change-time">1 Day</div>
+                </div>
+                <div class="item">
+                    <div class="item-price-change">
+                        9.82
+                        %
+                    </div>
+                    <div class="item-change-time">7 Days</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="center-table-content">
+            <table class="crypto-table" id="crypto-table">
+                <thead>
+                    <tr>
+                        <th>
+                            <h3>
+                                <span class="pointer">#</span>
+                            </h3>
+                        </th>
+                        <th>
+                            <h3>
+                                <span class="pointer">Name</span>
+                            </h3>
+                        </th>
+                        <th>
+                            <h3>
+                                <span class="pointer">Last Traded Price</span>
+                            </h3>
+                        </th>
+                        <th>
+                            <h3>
+                                <span class="pointer">Buy / Sell Price</span>
+                            </h3>
+                        </th>
+                        <th>
+                            <h3>
+                                <span class="pointer">Volume</span>
+                            </h3>
+                        </th>
+                        <th>
+                            <h3>
+                                <span class="pointer">Base Unit</span>
+                            </h3>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- <tr>
+                        <td class="td-align">
+                            <h4 class="table-text">1</h4>
+                        </td>
+                        <td class="td-align">
+                            <h4 class="table-text">Name</h4>
+                        </td>
+                        <td class="td-align">
+                            <h4 class="table-text">₹ 22,66,200</h4>
+                        </td>
+                        <td class="td-align">
+                            <h4 class="table-text"><span>₹ 22,66,201 / ₹ 22,90,088</span></h4>
+                        </td>
+                        <td class="td-align">
+                            <h4 class="table-text">Volume</h4>
+                        </td>
+                        <td class="td-align">
+                            <h4 class="table-text">Base Unit</h4>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-text">Copyright © 2019</div>
+            <div class="footer-text">HodlInfo.com</div>
+            <div class="footer-text pointer" style="margin-left: auto;">
+                <a href="mailto:support@hodlinfo.com" class="footer-text-link">Support
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

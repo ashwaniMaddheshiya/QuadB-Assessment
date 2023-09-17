@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #5dc7c2;
+  --table-row: #f8f9fa;
+  --text-color:#000000;
+  --price-color: #0c0f48;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.dark-mode {
+  --primary-color: #191d28;
+  --secondary-color: #5dc7c2;
+  --table-row: #191d28;
+  --text-color: #ffffff;
+  --price-color: #ffffff;
+}
+
+.nav-container {
+  /* border: 1px solid red; */
+  padding: 20px 30px 0px;
+  height: 90px;
+}
+
+.nav-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid blue; */
+  height: 70px;
+}
+
+.logo {
+  width: 33.3333%;
+}
+
+.nav-logo-image-container {
+  width: 80%;
+  padding: none;
+}
+
+.nav-logo-image-container > img {
+  padding: 10px;
+}
+
+.flat-logo {
+  width: 80%;
+}
+
+/* Style the button container */
+.nav-btn-options {
+  display: inline-block;
+}
+
+/* Style the button group */
+.btn-group {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px; /* Adjust the spacing between button groups */
+}
+
+/* Style the button */
+.btn {
+  background-color: #5dc7c2; /* Change to your desired button color */
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* Style the dropdown menu */
+.btn-dropdownMenu {
+  display: none;
+  position: absolute;
+  border: 1px solid #dddddd;
+  background-color: #f9f9f9; 
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-item {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333; 
+  display: block;
+}
+
+/* Hover effect for the button group to show the dropdown menu */
+.btn-group:hover .btn-dropdownMenu {
+  display: block;
+}
+
+.nav-right {
+  /* border: 1px solid; */
+  text-align: right;
+  width: 33.3333%;
+}
+
+.nav-right-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+
+.telbtn {
+  margin: 20px;
+}
+
+/* Toogle Swicth */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border: 2px solid #414141;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: rgb(12, 11, 11);
+  border-radius: inherit;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+/* Center Styling */
+.center-upper-caraousel {
+  padding: 0 30px;
+  /* border: 1px solid; */
+}
+
+.center-inner-caraousel {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item {
+  text-align: center;
+}
+
+.item-price-change {
+  color: var(--secondary-color);
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.item-change-time {
+  color: grey;
+  font-weight: 300;
+}
+
+#item-main-price-container {
+  text-align: center;
+  font: 32;
+  padding-bottom: 30px;
+}
+
+.price-subtext {
+  color: grey;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.75px;
+}
+
+.subtext-heading {
+  font-size: 28px;
+}
+
+.price-heading {
+  font-weight: 400;
+  font-size: 80px;
+  padding: 18px;
+  color: var(--price-color);
+}
+
+/* Table  */
+.center-table-content {
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.crypto-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  margin: 0;
+  text-align: center;
+  color: grey;
+}
+
+.crypto-table td {
+  color: var(--text-color);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.crypto-table td h4 {
+  font-size: 16px;
+  margin: 0;
+  opacity: 1;
+}
+
+.crypto-table tr {
+  background-color: var(--table-row);
+}
+
+.td-align {
+  align-items: center;
+}
+
+.footer {
+  bottom: 0;
+  padding: 13px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-text {
+  white-space: nowrap;
+  padding-right: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #888686;
+}
+
+.footer-text > a {
+  text-decoration: none;
+  background-color: transparent;
+}
